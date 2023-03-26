@@ -9,7 +9,7 @@ const PremiumRooms = () => {
 
   //Room Filter
   const filteredPremiumRooms = rooms.filter((room) => {
-    return room.type === "Premium Room";
+    return room.category === "Premium Room";
   });
   return (
     <div className="container mt-5 mb-5">

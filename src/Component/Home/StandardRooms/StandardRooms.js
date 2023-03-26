@@ -7,7 +7,7 @@ const StandardRooms = () => {
   const { rooms } = useContext(RoomContext);
   //Room Filter
   const filteredStandardRooms = rooms.filter((room) => {
-    return room.type === "Standard Room";
+    return room.category === "Standard Room";
   });
 
   if (!filteredStandardRooms) {

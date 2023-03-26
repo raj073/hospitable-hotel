@@ -3,7 +3,8 @@ import { BsFillStarFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const StandardRoom = ({ standardRooms }) => {
-  const { _id, type, title, description, rating, price, image } = standardRooms;
+  const { _id, category, title, description, rating, price, image } =
+    standardRooms;
   return (
     <div className="row px-2 py-4 bg-white border rounded mt-4">
       <div className="col-md-3 mt-1">
@@ -32,7 +33,7 @@ const StandardRoom = ({ standardRooms }) => {
         <div className="d-flex flex-row align-items-center">
           <h4 className="mr-1 text-warning">$ {price}</h4>
         </div>
-        <h6 className="text-success">{type}</h6>
+        <h6 className="text-success">{category}</h6>
         <div className="d-flex flex-column mt-4">
           <button className="btn btn-primary btn-sm" type="button">
             <Link

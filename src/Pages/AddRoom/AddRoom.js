@@ -59,7 +59,7 @@ const AddRoom = () => {
           const room = {
             categoryId: categoryObject[data.category],
             category: data.category,
-            roomName: data.title,
+            title: data.title,
             rating: data.rating,
             price: data.price,
             description: data.description,

@@ -10,7 +10,7 @@ const RoomProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchRoom = async () => {
-      const response = await fetch("hotel.json");
+      const response = await fetch("http://localhost:5000/hotelroom");
       const data = await response.json();
       setRooms(data);
     };
