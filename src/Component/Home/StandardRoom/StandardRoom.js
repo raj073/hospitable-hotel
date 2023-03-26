@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BsFillStarFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../../Contexts/CartContext/CartContext";
 
 const StandardRoom = ({ standardRooms }) => {
   const { _id, category, title, description, rating, price, image } =
     standardRooms;
+  const { addToCart } = useContext(CartContext);
   return (
     <div className="row px-2 py-4 bg-white border rounded mt-4">
       <div className="col-md-3 mt-1">
@@ -43,7 +45,11 @@ const StandardRoom = ({ standardRooms }) => {
               Show Details
             </Link>
           </button>
-          <button className="btn btn-outline-primary btn-sm mt-2" type="button">
+          <button
+            onClick={() => addToCart(standardRooms, _id)}
+            className="btn btn-outline-primary btn-sm mt-2"
+            type="button"
+          >
             Add to Cart
           </button>
         </div>

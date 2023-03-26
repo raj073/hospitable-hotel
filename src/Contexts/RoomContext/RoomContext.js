@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import Loader from "../../Component/Loader/Loader";
 
 export const RoomContext = createContext();
 
@@ -16,6 +17,10 @@ const RoomProvider = ({ children }) => {
     };
     fetchRoom();
   });
+
+  if (!rooms) {
+    return <Loader></Loader>;
+  }
 
   return (
     <RoomContext.Provider value={{ rooms }}>{children}</RoomContext.Provider>

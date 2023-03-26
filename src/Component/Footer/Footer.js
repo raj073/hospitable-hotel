@@ -5,7 +5,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer-basic bg-dark">
+    <div className="footer-basic bg-dark fixed-bottom">
       <footer>
         <div className="social">
           <a

@@ -5,7 +5,9 @@ import AddRoom from "../../Pages/AddRoom/AddRoom";
 import RoomDetails from "../../Pages/RoomDetails/RoomDetails";
 import SignIn from "../../Pages/SignIn/SignIn";
 import SignUp from "../../Pages/SignUp/SignUp";
-import Cart from "../../Pages/Cart/Cart";
+import CartItem from "../../Pages/Cart/CartItem/CartItem";
+import Checkout from "../../Pages/Checkout/Checkout";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -34,7 +36,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/cart",
-        element: <Cart></Cart>,
+        element: <CartItem></CartItem>,
+      },
+      {
+        path: "/checkout",
+        element: (
+          <PrivateRoute>
+            <Checkout></Checkout>
+          </PrivateRoute>
+        ),
       },
     ],
   },

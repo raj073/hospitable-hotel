@@ -45,16 +45,18 @@ const Header = () => {
         fixed="top"
       >
         <Container>
-          <Navbar.Brand>
-            <img
-              src={logo}
-              width="35"
-              height="35"
-              className="d-inline-block align-top"
-              alt="logo"
-            />{" "}
-            Hospitable Hotel
-          </Navbar.Brand>
+          <Link to={"/"} className="text-white text-decoration-none">
+            <Navbar.Brand>
+              <img
+                src={logo}
+                width="35"
+                height="35"
+                className="d-inline-block align-top"
+                alt="logo"
+              />{" "}
+              Hospitable Hotel
+            </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="m-auto">

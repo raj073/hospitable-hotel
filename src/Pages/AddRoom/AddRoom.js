@@ -7,7 +7,6 @@ import { useQuery } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 
 const AddRoom = () => {
-  const [error, setError] = useState("");
   const {
     register,
     handleSubmit,
@@ -66,7 +65,6 @@ const AddRoom = () => {
             image: imgData.data.url,
             postingTime: new Date(),
           };
-          console.log(room);
 
           //Insert Room Information to the MongoDB Database
           fetch("http://localhost:5000/addroom", {
@@ -82,14 +80,14 @@ const AddRoom = () => {
                 position: "top-right",
               });
               reset();
-              navigate("");
+              navigate("/");
             });
         }
       });
   };
 
   return (
-    <div style={{ marginBottom: "200px", marginTop: "50px" }}>
+    <div style={{ marginBottom: "200px", marginTop: "100px" }}>
       <Container>
         <Row className="vh-100 d-flex justify-content-center align-items-center">
           <Col sm={6} md={8} lg={8} xs={12}>

@@ -45,7 +45,6 @@ const CartProvider = ({ children }) => {
           return item;
         }
       });
-      console.log(newCart);
       setCart(newCart);
     } else {
       setCart([...cart, newItem]);
@@ -55,7 +54,7 @@ const CartProvider = ({ children }) => {
   //Remove From Cart
   const removeFromCart = (id) => {
     const newcart = cart.filter((item) => {
-      return item.id !== id;
+      return item._id !== id;
     });
     setCart(newcart);
   };
@@ -67,18 +66,18 @@ const CartProvider = ({ children }) => {
 
   //Amount Increased
   const increaseAmount = (id) => {
-    const cartItem = cart.find((item) => item.id === id);
+    const cartItem = cart.find((item) => item._id === id);
     addToCart(cartItem, id);
   };
 
   //Amount Decreased
   const decreaseAmount = (id) => {
     const cartItem = cart.find((item) => {
-      return item.id === id;
+      return item._id === id;
     });
     if (cartItem) {
       const newCart = cart.map((item) => {
-        if (item.id === id) {
+        if (item._id === id) {
           return { ...item, amount: cartItem.amount - 1 };
         } else {
           return item;
@@ -90,6 +89,14 @@ const CartProvider = ({ children }) => {
       removeFromCart(id);
     }
   };
+
+  if (!cart) {
+    return (
+      <div className="container" style={{ marginTop: "100px" }}>
+        <h1>There is no Room in the Shopping Cart</h1>
+      </div>
+    );
+  }
 
   return (
     <CartContext.Provider

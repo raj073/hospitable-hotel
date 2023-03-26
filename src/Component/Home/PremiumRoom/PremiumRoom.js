@@ -9,9 +9,6 @@ const PremiumRoom = ({ premiumRooms }) => {
   const { id } = useParams();
   const { addToCart } = useContext(CartContext);
 
-  const handleAddToCart = () => {
-    console.log(premiumRooms);
-  };
   return (
     <div className="row px-2 py-4 bg-white border rounded mt-4">
       <div className="col-md-3 mt-1">
