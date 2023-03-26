@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "641c6e929d478a338f48e0ae",
+    "type": "Premium Room",
+    "title": "Executive Room",
+    "description": "A hotel room more orientated towards business (executive) guests. Usually with a desk or space for guests to get some work done.",
+    "rating": "4.2",
+    "price": "250",
+    "image": "https://i.ibb.co/X8tmTxG/Executive-Room.jpg"
+  },
+  {
+    "_id": "641c6e920c5b3423117ef79a",
+    "type": "Premium Room",
+    "title": "Master Suite",
+    "description": "Master suite is a large room that has a private bathroom and several other amenities depending on the individual's needs and preferences. This can include a space for lounging, a fireplace, a small office with a door and even a walk-in closet.",
+    "rating": "4.4",
+    "price": "320",
+    "image": "https://i.ibb.co/c8Vf7rt/Master-Suite.jpg"
+  },
+  {
+    "_id": "641c6e92ce6d38051798c4dd",
+    "type": "Premium Room",
+    "title": "Penthouse Suite",
+    "description": "A Penthouse is typically an apartment on the highest floor of an apartment building. It usually takes up less than half of the entire (flat) roof of the building. Originally the word penthouse meant a small building with a sloped roof.",
+    "rating": "4.6",
+    "price": "400",
+    "image": "https://i.ibb.co/N3Rsbrm/Penthouse-Suite.jpg"
+  },
+  {
+    "_id": "641c6e9250c00920d75c4df8",
+    "type": "Premium Room",
+    "title": "Aparthotel rooms / Apart-style rooms",
+    "description": "The aparthotel offers its own kitchen and more space and a more homelike living environment than a standard hotel. Especially for longer stays, an apartment hotel is also a much cheaper option than a hotel.",
+    "rating": "4.8",
+    "price": "600",
+    "image": "https://i.ibb.co/CWpdYfB/Apart-style-rooms.jpg"
+  }
+]

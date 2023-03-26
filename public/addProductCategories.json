@@ -1,0 +1,10 @@
+[
+  {
+    "categoryId": "01",
+    "name": "Standard Room"
+  },
+  {
+    "categoryId": "02",
+    "name": "Premium Room"
+  }
+]
